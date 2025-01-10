@@ -1,5 +1,4 @@
-const API_BASE =
-  "https://edushare-app.d9e3d2bmewhxadhh.southeastasia.azurecontainer.io:8083/api/v1/auth";
+const API_BASE = "https://edushare.codebloop.my.id/api/v1/auth";
 let token = "";
 function setCookie(name, value, days) {
   const date = new Date();

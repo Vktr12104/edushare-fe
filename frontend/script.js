@@ -11,13 +11,16 @@ async function logout() {
     return;
   }
   try {
-    const response = await fetch("http://127.0.0.1:8000/api/v1/auth/logout", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ refresh_token: refreshToken }),
-    });
+    const response = await fetch(
+      "https://edushare.codebloop.my.id/api/v1/auth/logout",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ refresh_token: refreshToken }),
+      }
+    );
 
     if (response.ok) {
       if (response.status === 204) {
@@ -45,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("logout-button")
     .addEventListener("click", function (event) {
-      event.preventDefault(); // Menghindari tindakan default (link klik)
-      logout(); // Memanggil fungsi logout
+      event.preventDefault();
+      logout();
     });
 });
