@@ -20,7 +20,7 @@ if (menuId) {
 async function fetchCollection(id) {
   try {
     const response = await fetch(
-      `http://edushare-app.d9e3d2bmewhxadhh.southeastasia.azurecontainer.io:8083/api/v1/auth/collect/${id}`
+      `https://edushare-app.d9e3d2bmewhxadhh.southeastasia.azurecontainer.io:8083/api/v1/auth/collect/${id}`
     );
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -101,7 +101,7 @@ async function createOrder() {
   console.log(orderData);
   try {
     const response = await fetch(
-      "http://edushare-app.d9e3d2bmewhxadhh.southeastasia.azurecontainer.io:8083/api/v1/auth/order",
+      "https://edushare-app.d9e3d2bmewhxadhh.southeastasia.azurecontainer.io:8083/api/v1/auth/order",
       {
         method: "POST",
         headers: {
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       try {
         const response = await fetch(
-          "http://edushare-app.d9e3d2bmewhxadhh.southeastasia.azurecontainer.io:8083/api/v1/auth/order/Predict",
+          "https://edushare-app.d9e3d2bmewhxadhh.southeastasia.azurecontainer.io:8083/api/v1/auth/order/Predict",
           {
             method: "POST",
             headers: {

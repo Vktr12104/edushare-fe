@@ -1,7 +1,7 @@
 async function fetchMenu() {
   try {
     const response = await fetch(
-      "http://edushare-app.d9e3d2bmewhxadhh.southeastasia.azurecontainer.io:8083/api/v1/auth/collect"
+      "https://edushare-app.d9e3d2bmewhxadhh.southeastasia.azurecontainer.io:8083/api/v1/auth/collect"
     );
     const menus = await response.json();
 
