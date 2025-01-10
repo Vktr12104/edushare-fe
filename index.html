@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth Frontend</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>Auth Frontend</h1>
+      <h2>Login</h2>
+      <!-- Login Form -->
+      <div class="form-container">
+        <form id="loginForm" onsubmit="event.preventDefault(); login();">
+          <div class="input-field">
+            <label for="login-username">Username</label>
+            <input
+              type="text"
+              id="login-username"
+              placeholder="Username"
+              required
+            />
+          </div>
+          <div class="input-field">
+            <label for="login-password">Password</label>
+            <input
+              type="password"
+              id="login-password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn">Login</button>
+        </form>
+        <div id="login-feedback" class="feedback"></div>
+        <p id="access-token-display"></p>
+        <p class="register-text">
+          Don't have an account?
+          <a href="frontend/register.html">Register here</a>
+        </p>
+      </div>
+    </div>
+    <script src="frontend/scripts.js"></script>
+  </body>
+</html>

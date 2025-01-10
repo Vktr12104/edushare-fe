@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduShare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="stylesss.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Edu<span>Share.</span></a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#Topik">Belanja</a>
+        <a href="#SignOut" id="logout-button">SignOut</a>
+      </div>
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <div id="order-container"></div>
+    </div>
+    <div class="container-contact-form">
+      <form class="form-predict">
+        <h3>Product Prediction</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <!-- Kategori_Barang -->
+            <div class="form-group">
+              <p>Kategori Barang</p>
+              <label for="Kategori_Barang"></label>
+              <select
+                name="Kategori_Barang"
+                id="Kategori_Barang"
+                class="form-control"
+                required
+              >
+                <option value="Seragam">Seragam</option>
+                <option value="Kesehatan">Kesehatan</option>
+                <option value="Mainan Anak">Mainan Anak</option>
+                <option value="Hobi">Hobi</option>
+                <option value="Buku">Buku</option>
+              </select>
+            </div>
+
+            <!-- Harga_Barang -->
+            <div class="form-group">
+              <p>Harga Barang</p>
+              <input
+                type="text"
+                name="Harga_Barang"
+                class="form-control"
+                placeholder="Harga Barang"
+                required="required"
+              />
+            </div>
+
+            <!-- Diskon -->
+            <div class="form-group">
+              <p>Diskon Barang</p>
+              <input
+                type="text"
+                name="Diskon"
+                class="form-control"
+                placeholder="Diskon (%)"
+                required="required"
+              />
+            </div>
+
+            <!-- Jumlah_Pembelian -->
+            <div class="form-group">
+              <p>Jumlah Beli Barang</p>
+              <input
+                type="text"
+                name="Jumlah_Pembelian"
+                class="form-control"
+                placeholder="Jumlah Pembelian"
+                required="required"
+              />
+            </div>
+
+            <!-- Durasi_Kepemilikan -->
+            <div class="form-group">
+              <p>Durasi Kepemilikan</p>
+              <input
+                type="text"
+                name="Durasi_Kepemilikan"
+                class="form-control"
+                placeholder="Durasi Kepemilikan (bulan)"
+                required="required"
+              />
+            </div>
+
+            <!-- Jarak -->
+            <div class="form-group">
+              <p>Jarak</p>
+              <input
+                type="text"
+                name="Jarak"
+                class="form-control"
+                placeholder="Jarak (km)"
+                required="required"
+              />
+            </div>
+            <button type="submit" class="btn-predict">Predict</button>
+          </div>
+          <div class="col-md-6">
+            <h3 id="hasilPrediksi">Saran Metode Pembayaran : <br /></h3>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Tombol Order -->
+    <div class="order-button-container">
+      <button
+        class="btn-order"
+        onclick="event.preventDefault(); createOrder();"
+      >
+        Order Sekarang
+      </button>
+    </div>
+
+    <!-- Footer Sections Start-->
+    <footer>
+      <div class="social">
+        <a href="https://www.instagram.com/viktor12104/"
+          ><i data-feather="instagram"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/viktor-arsindiantoro-siringoringo-2781171b4/"
+          ><i data-feather="linkedin"></i
+        ></a>
+      </div>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#Topik">Belanja</a>
+      </div>
+      <div class="credit">
+        <p>Created by <a href="">ViktorSiringoringo</a>. | &copy; 2024.</p>
+      </div>
+    </footer>
+    <!-- Footer Sections End-->
+    <!--Feather Icons-->
+    <script src="scriptsss.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
